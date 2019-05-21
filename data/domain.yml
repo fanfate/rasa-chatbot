@@ -1,0 +1,49 @@
+intents:
+  - greet
+  - mood_happy
+  - mood_unhappy
+  - affirm
+  - restaurant_search
+  - political_disscussion
+  - goodbye
+
+entities:
+  - location
+  - good_events
+  - bad_events
+  - events
+  - restaurant_type
+  - mood
+
+actions:
+  - utter_greet
+  - utter_happy
+  - utter_unhappy
+  - utter_affirm
+  - utter_political_disscussion
+  - utter_restaurant_search
+  - utter_goodbye
+
+templates:
+  utter_default:
+  - text: "你说什么？我没听清"
+
+  utter_greet:
+  - text: "你好啊，最近怎么样？"
+
+  utter_happy:
+  - text: "那很不错哦！"
+
+  utter_unhappy:
+  - text: "表示同情～"
+
+  utter_affirm:
+  - text: "你能赞同我真是太好了！"
+
+  utter_political_disscussion:
+  - text: "最近的确不是很太平啊"
+  - text: "{location}的确是{events}了"
+
+  utter_restaurant_search:
+  - text: "我知道有一家{location}饭店，挺近的，往东一百多米"
+  - text: "我知道有一家{location}{restaurant_type}，挺近的，往东一百多米"
