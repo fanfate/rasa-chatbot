@@ -1,0 +1,79 @@
+slots:
+  location:
+    type: text
+  good_events:
+    type: text
+  bad_events:
+    type: text
+  events:
+    type: text
+  restaurant_type:
+    type: text
+  mood:
+    type: text
+  item:
+    type: text
+intents:
+  - greet
+  - mood_happy
+  - mood_unhappy
+  - affirm
+  - restaurant_search
+  - political_disscussion
+  - goodbye
+  - thanks
+
+entities:
+  - location
+  - good_events
+  - bad_events
+  - events
+  - restaurant_type
+  - mood
+  - item
+
+actions:
+  - utter_greet
+  - utter_happy
+  - utter_unhappy
+  - utter_affirm
+  - utter_political_disscussion
+  - utter_restaurant_search
+  - utter_goodbye
+  - utter_thanks
+
+templates:
+  utter_default:
+  - "你说什么？我没听清"
+
+  utter_greet:
+  - "你好啊，最近怎么样？"
+
+  utter_happy:
+  - "那很不错哦！"
+
+  utter_unhappy:
+  - "表示同情～"
+
+  utter_affirm:
+  - "你能赞同我真是太好了！"
+
+  utter_political_disscussion:
+  - "最近的确不是很太平啊"
+  - "{location}的确是{events}了"
+
+  utter_restaurant_search:
+  - "我知道有一家饭店，挺近的，往东一百多米"
+  - "我知道有一家{location}饭店，挺近的，往东一百多米"
+  - "我知道有一家{location}{restaurant_type}，挺近的，往东一百多米"
+  
+  utter_goodbye:
+  - "再见！"
+  - "拜拜！"
+  - "再会！"
+  - "下次再见！"
+
+  utter_thanks:
+  - "不用谢啦"
+  - "不要见外嘛"
+  

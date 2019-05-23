@@ -1,0 +1,178 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "早上好",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "晚上好",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "早安",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "晚安",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "有啥饭店推荐吗",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "推荐个餐厅",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "是的",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "说得对",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "是这样没错",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "再见",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "不聊了",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "拜拜",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "找一个中国餐厅",
+        "intent": "restaurant_search",
+        "entities": [
+        {
+          "start":3,
+          "end":5,
+          "value":"中国",
+          "entity":"location"
+        }
+	      ]
+      },
+      {
+        "text": "最近美国又出事啦",
+        "intent": "political_disscussion",
+        "entities": [
+        {
+          "start":2,
+          "end":4,
+          "value":"美国",
+          "entity":"location"
+        },
+        {
+          "start":5,
+          "end":7,
+          "value":"出事",
+          "entity":"bad_events"
+        },
+        {
+          "start":5,
+          "end":7,
+          "value":"出事",
+          "entity":"events"
+        }
+	      ]
+      },
+      {
+        "text": "俄罗斯风头正旺着呢",
+        "intent": "political_disscussion",
+        "entities": [
+        {
+          "start":0,
+          "end":3,
+          "value":"俄罗斯",
+          "entity":"location"
+        },
+        {
+          "start":3,
+          "end":7,
+          "value":"风头正旺",
+          "entity":"good_events"
+        },
+        {
+          "start":3,
+          "end":7,
+          "value":"风头正旺",
+          "entity":"events"
+        }
+	      ]
+      },
+      {
+        "text": "找一个快餐店",
+        "intent": "restaurant_search",
+        "entities": [
+        {
+          "start":3,
+          "end":5,
+          "value":"快餐",
+          "entity":"restaurant_type"
+        }	
+        ]
+      },
+      {
+        "text": "找一个西餐店",
+        "intent": "restaurant_search",
+        "entities": [
+        {
+          "start":3,
+          "end":5,
+          "value":"西餐",
+          "entity":"restaurant_type"
+        }	
+        ]
+      },
+      {
+        "text": "很好",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "你好",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "最近还好啊",
+        "intent": "mood_happy",
+        "entities": []
+      },
+      {
+        "text": "这几天心情不是很好",
+        "intent": "mood_uphappy",
+        "entities": [
+          {
+            "start":3,
+            "end":5,
+            "value":"心情",
+            "entity":"mood"
+          }
+        ]
+      }
+
+    ]
+  }
+}
