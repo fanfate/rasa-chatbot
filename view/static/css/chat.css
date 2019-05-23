@@ -57,7 +57,7 @@
 }
 #user_face_icon {
     display: inline-block;
-    background: red;
+    /* background: red; */
     width: 60px;
     height: 60px;
     border-radius: 30px;

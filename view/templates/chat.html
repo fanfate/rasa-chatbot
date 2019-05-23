@@ -11,7 +11,7 @@
         window.onload = function(){
             const USER = 0;
             const BOT = 1;
-            var arrIcon = ['http://www.xttblog.com/icons/favicon.ico','http://www.xttblog.com/wp-content/uploads/2016/03/123.png'];
+            var arrIcon = ['../static/img/usr.png','../static/img/bot.png'];
             var role = 0;     // 身份标示
             var iNow = -1;    //用来累加改变左右浮动onclick = 
             var icon = document.getElementById('user_face_icon').getElementsByTagName('img');
@@ -104,7 +104,7 @@
 		</ul>
         <div class="footer">
             <div id="user_face_icon">
-                <img src="http://www.xttblog.com/icons/favicon.ico" alt="">
+                <img src="../static/img/usr.png" alt="">
             </div>
             <form>
                 {% csrf_token %}
