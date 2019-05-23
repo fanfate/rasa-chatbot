@@ -24,11 +24,31 @@ clean:
 	rm -rf *.egg-info
 	rm -rf docs/_build
 
+run:
+	make run-actions&
+	make run-core
+
+run-api:
+	make run-actions&
+	make run-http
+
 train-nlu:
 	python -m rasa_nlu.train -c config/nlu_config.json --data data/nlu_data.json -o models --fixed_model_name nlu --project current --verbose
 
 train-core:
 	python -m rasa_core.train -d data/domain.yml -s data/stories.md -o models/current/dialogue -c config/policies.yml
+	
+run-actions:
+	python -m rasa_core_sdk.endpoint --actions actions
+	
+run-http:
+	python -m rasa_core.run --enable_api -d models/current/dialogue -u models/current/nlu --endpoints endpoints.yml
+
+run-core:
+	python -m rasa_core.run --nlu models/current/nlu --core models/current/dialogue --endpoints endpoints.yml
+	
+run-online:
+	python -m rasa_core.train --online -o models/current/dialogue -d data/domain.yml -s data/stories.md --endpoints endpoints.yml
 
 cmdline:
 	python -m rasa_core.run -d models/current/dialogue -u models/current/nlu --endpoints endpoints.yml
@@ -41,4 +61,6 @@ nlu-server:
 
 train-interactive:
 	python -m rasa_core.train interactive --core models/current/dialogue --nlu models/current/nlu --endpoints endpoints.yml
+
+
 
