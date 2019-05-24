@@ -87,12 +87,6 @@
           "start":5,
           "end":7,
           "value":"出事",
-          "entity":"bad_events"
-        },
-        {
-          "start":5,
-          "end":7,
-          "value":"出事",
           "entity":"events"
         }
 	      ]
@@ -111,30 +105,24 @@
           "start":3,
           "end":7,
           "value":"风头正旺",
-          "entity":"good_events"
-        },
-        {
-          "start":3,
-          "end":7,
-          "value":"风头正旺",
           "entity":"events"
         }
 	      ]
       },
       {
-        "text": "找一个快餐店",
+        "text": "找一个卖拉面的饭店",
         "intent": "restaurant_search",
         "entities": [
         {
-          "start":3,
-          "end":5,
+          "start":4,
+          "end":6,
           "value":"快餐",
           "entity":"restaurant_type"
         }	
         ]
       },
       {
-        "text": "找一个西餐店",
+        "text": "找一个西餐餐厅",
         "intent": "restaurant_search",
         "entities": [
         {
@@ -146,7 +134,7 @@
         ]
       },
       {
-        "text": "很好",
+        "text": "对",
         "intent": "affirm",
         "entities": []
       },
@@ -162,15 +150,51 @@
       },
       {
         "text": "这几天心情不是很好",
-        "intent": "mood_uphappy",
-        "entities": [
-          {
-            "start":3,
-            "end":5,
-            "value":"心情",
-            "entity":"mood"
-          }
-        ]
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "心情不错",
+        "intent": "mood_happy",
+        "entities": []
+      },
+      {
+        "text": "心情很好",
+        "intent": "mood_happy",
+        "entities": []
+      },
+      {
+        "text": "心情很差",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "不高兴",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "我很难受"
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "很不开心"
+      },
+      {
+        "text": "谢谢",
+        "intent": "thank",
+        "entities": []
+      },
+      {
+        "text": "感谢",
+        "intent": "thank",
+        "entities": []
+      },
+      {
+        "text": "多谢",
+        "intent": "thank",
+        "entities": []
       }
 
     ]

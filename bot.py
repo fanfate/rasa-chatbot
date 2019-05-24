@@ -25,18 +25,6 @@ def predict(model_directory):
 
     print(interpreter.parse(u"你好啊"))
 
-# def train_dialogue(domain_file, model_path, story_file):
-#     agent = Agent(domain_file, policies=[MemoizationPolicy(), KerasPolicy()])
-#     agent.train(story_file, max_history=3, epochs=400,batch_size=10,validation_split=0.2)
-#     agent.persist(model_path)
-#     return agent
-
-
-# def train_dialogue_online(input_channel, interpreter, domain_file, training_data_file):
-#     agent = Agent(domain_file, policies=[MemoizationPolicy(), KerasPolicy()], interpreter=interpreter)
-#     agent.train_online(training_data_file, input_channel=input_channel,max_history=3, batch_size=50,epochs=200,max_training_samples=300)
-#     return agent
-
 def run():
     agent = Agent.load("models/current/dialogue")
     #agent.handle_channels();
