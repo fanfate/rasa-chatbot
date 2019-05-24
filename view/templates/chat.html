@@ -101,6 +101,7 @@
                     //     showMsg(result.content);
                     // });
                     socket.emit('user_uttered', {message: text.value, session_id: sid});
+                   
                     text.value = '';
                     // 内容过多时,将滚动条放置到最底端
                     content.scrollTop=content.scrollHeight;  
@@ -134,8 +135,7 @@
             </form>
             
         </div>
-    </div>
-
+    </div
     <!-- <div id="webchat">
         <script src="https://storage.googleapis.com/mrbot-cdn/webchat-latest.js"></script>        
         <script>            
@@ -153,5 +153,6 @@
                 })        
         </script>    
     </div> -->
+
 </body>
 </html>

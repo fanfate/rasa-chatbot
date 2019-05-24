@@ -37,31 +37,18 @@
 * restaurant_search{"location": "\u4e2d\u56fd"}
     - slot{"location": "\u4e2d\u56fd"}
     - utter_restaurant_search
-* mood_uphappy{"mood": "\u5fc3\u60c5"}
-    - slot{"mood": "\u5fc3\u60c5"}
+* mood_unhappy
     - utter_unhappy
-* goodbye
-    - utter_goodbye
-* affirm{"location": "\u7f8e\u56fd", "bad_events": "\u51fa\u4e8b"}
-    - slot{"bad_events": "\u51fa\u4e8b"}
-    - slot{"location": "\u7f8e\u56fd"}
-    - utter_political_disscussion
 * restaurant_search{"location": "\u58a8\u897f\u54e5", "restaurant_type": "\u5feb\u9910\u5e97"}
     - slot{"location": "\u58a8\u897f\u54e5"}
     - slot{"restaurant_type": "\u5feb\u9910\u5e97"}
     - utter_restaurant_search
-* goodbye
-    - utter_goodbye
-* political_disscussion{"location": "\u4e2d\u56fd", "good_events": "\u597d\u4e8b\u4e0d\u65ad"}
-    - slot{"good_events": "\u597d\u4e8b\u4e0d\u65ad"}
+* political_disscussion{"location": "\u4e2d\u56fd", "events": "\u597d\u4e8b\u4e0d\u65ad"}
+    - slot{"events": "\u597d\u4e8b\u4e0d\u65ad"}
     - slot{"location": "\u4e2d\u56fd"}
     - utter_political_disscussion
 * affirm
     - utter_affirm
-* goodbye
-    - utter_goodbye
-* stop
-    - utter_greet
 * goodbye
     - utter_goodbye
 
@@ -71,6 +58,73 @@
 * mood_happy
     - utter_happy
 * thanks
+    - utter_thanks
+* goodbye
+    - utter_goodbye
+
+## Generated Story -1817985226948851353
+* greet
+    - utter_greet
+* goodbye
+    - utter_goodbye
+
+## Generated Story -491609271534800292
+* greet
+    - utter_greet
+* restaurant_search{"location": "\u65e5\u672c"}
+    - slot{"location": "\u65e5\u672c"}
+    - utter_restaurant_search
+* goodbye
+    - utter_goodbye
+
+## Generated Story 8514844208596233111
+* greet
+    - utter_greet
+* mood_unhappy
+    - utter_unhappy
+* thanks
+    - utter_thanks
+* goodbye
+    - utter_goodbye
+
+## Generated Story 0
+
+## Generated Story 5399180934679355396
+* greet
+    - utter_greet
+
+## Generated Story 2541775504231302394
+* greet
+    - utter_greet
+* mood_happy
+    - utter_happy
+* thank
+    - utter_thanks
+* goodbye
+    - utter_goodbye
+
+## Generated Story -940504101845698697
+* greet
+    - utter_greet
+* mood_happy
+    - utter_happy
+* thank
+    - utter_thanks
+* political_disscussion{"location": "\u7f8e\u56fd", "events": "\u4e8b\u60c5"}
+    - slot{"events": "\u4e8b\u60c5"}
+    - slot{"location": "\u7f8e\u56fd"}
+    - utter_political_disscussion
+* affirm
+    - utter_affirm
+* goodbye
+    - utter_goodbye
+
+## Generated Story -4716975379520814020
+* greet
+    - utter_greet
+* mood_happy
+    - utter_happy
+* thank
     - utter_thanks
 * goodbye
     - utter_goodbye
