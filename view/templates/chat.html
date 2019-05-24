@@ -70,6 +70,16 @@
                     role = 0;
                 }                
             }
+
+            var socket = new WebSocket("ws://" + 'localhost:5500' + "/get_started/");
+            socket.onopen = function() {
+                console.log("soclet opend");
+            }
+
+            socket.onmessage = function(m) {
+                console.log(m.data);
+            }
+
             btn.onclick = function(){
                 role = USER;
                 if(text.value ==''){
@@ -77,11 +87,28 @@
                 }else {
                     showMsg(text.value);
                     // post('/', {words: text.value});
-                    $.post('/get_response', {words: text.value}, function(result) {
-                        result = jQuery.parseJSON(result);
-                        role = result.role;
-                        showMsg(result.content);
-                    });
+                    // $.post('/get_response', {words: text.value}, function(result) {
+                    //     result = jQuery.parseJSON(result);
+                    //     role = result.role;
+                    //     showMsg(result.content);
+                    // });
+                    // $.post("ws://127.0.0.1:5500", "你好", function(result) {
+                    //     alert(result);
+                    // })
+                    // $.ajax({
+                    //     type:"POST",
+                    //     url:"ws://127.0.0.1:5500", //访问的链接
+                    //     dataType:"jsonp",  //数据格式设置为jsonp
+                    //     //data: "你好",
+                    //     jsonp:"callback",  //Jquery生成验证参数的名称
+                    //     success:function(data){  //成功的回调函数
+                    //         alert(data);
+                    //     },
+                    //     error: function (e) {
+                    //         alert("error");
+                    //     }
+                    // });
+                    socket.send("你好");
                     text.value = '';
                     // 内容过多时,将滚动条放置到最底端
                     content.scrollTop=content.scrollHeight;  
@@ -114,5 +141,22 @@
             
         </div>
     </div>
+    <div id="webchat">
+		<script src="https://storage.googleapis.com/mrbot-cdn/webchat-latest.js"></script>
+		<script>
+		    WebChat.default.init({
+		        selector: "#webchat",
+		        initPayload: "/get_started",
+		        interval: 1000, // 1000 ms between each message
+		        customData: {"sender": "django"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+		        socketUrl: "http://localhost:5500/",
+		        title: "Connect",
+		        subtitle: "The bot which connects people",
+		        profileAvatar: "https://rasa.com/assets/img/demo/rasa_avatar.png",
+		        showCloseButton: true,
+		        fullScreenMode: false
+		    })
+		</script>
+	</div>
 </body>
 </html>
